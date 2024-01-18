@@ -2,6 +2,10 @@
 {% load static %}
 {% block title %}Лента записей{% endblock title %}
 {% block content %}
+<<<<<<< HEAD
+=======
+<div class="container py-5">
+>>>>>>> 5b39b732a4e7e651f24306ed54afddc52453896c
   <h1>Лента записей</h1>
   {% for post in posts|dictsortreversed:'id' %}
   <article>
@@ -25,5 +29,9 @@
       <hr>
     {% endif %}
   {% endfor %}
+<<<<<<< HEAD
+=======
+</div>
+>>>>>>> 5b39b732a4e7e651f24306ed54afddc52453896c
 {% endblock content %}
 
