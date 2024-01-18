@@ -1,15 +1,9 @@
 from django.shortcuts import render
-<<<<<<< HEAD
-from typing import Type, Any
+from typing import Any
 
 from django.http import Http404
 
 posts: list[dict[str, Any]] = [
-=======
-
-
-posts = [
->>>>>>> 5b39b732a4e7e651f24306ed54afddc52453896c
     {
         'id': 0,
         'location': 'Остров отчаянья',
@@ -54,7 +48,6 @@ posts = [
 
 
 def index(request):
-<<<<<<< HEAD
     context = {'posts': posts}
     return render(request, 'blog/index.html', context)
 
@@ -73,24 +66,3 @@ def post_detail(request, post_id):
 def category_posts(request, category_slug):
     context = {'category': category_slug}
     return render(request, 'blog/category.html', context)
-=======
-    template = 'blog/index.html'
-    context = {'posts': posts}
-    return render(request, template, context)
-
-
-def post_detail(request, id):
-    template = 'blog/detail.html'
-    post = [post for post in posts if post['id'] == id]
-    context = {'post': post[0]}
-    return render(request, template, context)
-
-
-def category_posts(request, category_slug):
-    template = 'blog/category.html'
-    sort_posts = [post for post in posts if post['category']
-                  == category_slug]
-    context = {'category': category_slug,
-               'posts': sort_posts}
-    return render(request, template, context)
->>>>>>> 5b39b732a4e7e651f24306ed54afddc52453896c
